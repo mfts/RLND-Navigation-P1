@@ -1,4 +1,3 @@
-
 [//]: # (Image References)
 
 [image1]: ./img/untrained.gif "Untrained Agent"
