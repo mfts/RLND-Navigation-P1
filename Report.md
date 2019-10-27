@@ -99,7 +99,7 @@ Reference: [Deep Reinforcement Learning with Double Q-learning](https://arxiv.or
 
 Please refer to agent.py:111 for the implementation of double DQN algorithm, which chooses a next best action based on the local Q-network and evaluates the action values with the target Q-network. Therefore, avoiding to overestimate the action values.
 
-Surprisingly, it actually took longer to reach the goal of +13 over 100 episodes (616 episodes). See graph below.
+Surprisingly, it actually took longer to reach the goal of +13 over 100 episodes (480 episodes). See graph below.
 
 ![doubledqn][image5]
 *Scores from Double DQN algorithm*
@@ -115,7 +115,7 @@ It took 458 episodes to reach the goal of +13 over 100 episodes. See graph below
 *Scores from Dueling DQN algorithm* 
 
 ### Dueling Double DQN
-Combination of the two improvements to the algorithm.
+The combindation of a dueling network and a double DQN improves the agent's training process even further. Taking merely, 396 episodes to train.
 
 ![duelddqn][image7]
 *Scores from Dueling Double DQN algorithm*
