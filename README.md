@@ -59,39 +59,33 @@ To set up your python environment to run the code in this repository, follow the
 
 1. Create (and activate) a new environment with Python 3.6.
 
-```
+	```
 
-conda create --name drlnd python=3.6
+	conda create --name drlnd python=3.6
+	source activate drlnd
 
-source activate drlnd
-
-```
+	```
 
 2. Clone repository and install python dependencies
 
-```
+	```
 
-git clone REPO_NAME
+	git clone REPO_NAME
+	cd REPO_NAME
+	pip install -r requirements.txt
 
-cd REPO_NAME
-
-pip install -r requirements.txt
-
-```
+	```
 
 3. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.
 
-```bash
+	```bash
+	python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
-python -m ipykernel install --user --name drlnd --display-name "drlnd"
-
-```
+	```
 
 4. Before running code in a notebook, change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu.
 
-  
-
-![Kernel][image2]
+	![Kernel][image2]
 
   
 
