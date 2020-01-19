@@ -1,0 +1,4 @@
+[default]
+entity = mfts
+project = deep-rl
+

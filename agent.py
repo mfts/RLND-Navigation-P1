@@ -1,6 +1,8 @@
 import numpy as np
 import random
 from collections import namedtuple, deque
+import wandb
+wandb.init(project="deep-rl")
 
 from model import QNetwork as QNetwork
 
@@ -43,8 +45,13 @@ class Agent():
         self.qnetwork_target = QNetwork(state_size, action_size, seed).to(device)
         self.optimizer = optim.Adam(self.qnetwork_local.parameters(), lr=LR)
         
+        wandb.init(project="deep-rl")
+        wandb.watch(self.qnetwork_local)
+        wandb.watch(self.qnetwork_target)
+        
         # Replay memory
         self.memory = ReplayBuffer(action_size, BUFFER_SIZE, BATCH_SIZE, seed)
+        
         
         self.t_step = 0
         
@@ -60,7 +67,7 @@ class Agent():
         if self.t_step == 0:
             if len(self.memory) > BATCH_SIZE:
                    experiences = self.memory.sample()
-                   self.doublelearn(experiences, GAMMA)
+                   self.learn(experiences, GAMMA)
         
     def act(self, state, eps=0.2):
         '''
@@ -93,6 +100,8 @@ class Agent():
         
         # calculate loss
         loss = F.mse_loss(Q_expected, Q_targets)
+        
+        wandb.log({"Loss": loss})
         
         # minimize loss
         self.optimizer.zero_grad()

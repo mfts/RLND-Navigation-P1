@@ -1,0 +1,26 @@
+{
+    "root": "/Users/mfts/Developer/Udacity/nd893/p1-navigation",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "https://github.com/mfts/RLND-Navigation-P1.git",
+        "commit": "1f1de08f9622565ad9738e08d58b624fe4f06f4c"
+    },
+    "email": "marc@mfts.io",
+    "startedAt": "2020-01-19T12:29:19.491481",
+    "host": "MMBP.local",
+    "username": "mfts",
+    "executable": "/opt/anaconda3/envs/drlnd/bin/python",
+    "os": "Darwin-19.2.0-x86_64-i386-64bit",
+    "python": "3.6.9",
+    "cpu_count": 8,
+    "args": [
+        "-f",
+        "/Users/mfts/Library/Jupyter/runtime/kernel-fe500054-360e-46cc-97b8-a3f3f3e384c7.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "electric-paper-4",
+    "project": "deep-rl",
+    "heartbeatAt": "2020-01-19T14:42:31.741188"
+}
